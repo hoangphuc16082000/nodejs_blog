@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-
-// lib mongoose-slug-generator đang bị lỗi version nên chuyển qua dùng slugify
 const slugify = require('slugify');
+const mongooseDelete = require('mongoose-delete');
 
 const Schema = mongoose.Schema;
 
@@ -23,5 +22,11 @@ Course.pre('save', function(next) {
     this.slug = slugify(this.name, { lower: true, strict: true });
     next();
 });
+
+Course.plugin(mongooseDelete, { 
+    deletedAt : true,
+    overrideMethods: 'all' 
+});
+// overrideMethods : thực hiện ghi đè những methods
 
 module.exports = mongoose.model('Course', Course);

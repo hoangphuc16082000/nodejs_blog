@@ -6,3 +6,21 @@
     border-radius: 50%;
     margin-left: 4px;
 }
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .header-link {
+    display: flex;
+    align-items: center;
+  }
+  
+  .create-button {
+    margin-left: auto;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
