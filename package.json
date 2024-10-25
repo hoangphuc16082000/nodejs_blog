@@ -22,10 +22,12 @@
   "homepage": "https://github.com/hoangphuc16082000/nodejs_blog#readme",
   "description": "",
   "dependencies": {
+    "bootstrap-icons": "^1.11.3",
     "express": "^4.21.1",
     "express-handlebars": "^5.1.0",
     "method-override": "^3.0.0",
     "mongoose": "^8.7.2",
+    "mongoose-delete": "^1.0.2",
     "mongoose-slug-generator": "^1.0.4",
     "slugify": "^1.6.6"
   },
